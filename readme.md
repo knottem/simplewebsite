@@ -2,6 +2,8 @@
 
 This is a simple portfolio website that showcases some of my programming projects. It is built using HTML, CSS, and JavaScript.
 
+It was a fun experience learning how to make dark-mode work and save the preference so it doesnt default back to light mode everytime you change page.
+
 ## Projects
 
 These are some of my projects
