@@ -22,6 +22,25 @@ modeToggler.addEventListener('click', () => {
   document.cookie = `preferredMode=${preferredMode}; path=/; max-age=31536000`;
 });
 
+const preferredLanguage = getCookie('language');
+const svElements = document.querySelectorAll('.sv');
+const enElements = document.querySelectorAll('.en');
+if (preferredLanguage === 'en') {
+  for (let i = 0; i < svElements.length; i++) {
+    svElements[i].style.display = 'none';
+  }
+  for (let i = 0; i < enElements.length; i++) {
+    enElements[i].style.display = 'block';
+  }
+} else {
+  for (let i = 0; i < svElements.length; i++) {
+    svElements[i].style.display = 'block';
+  }
+  for (let i = 0; i < enElements.length; i++) {
+    enElements[i].style.display = 'none';
+  }
+}
+
 function getCookie(name) {
   const cookies = document.cookie.split(';');
   for (let i = 0; i < cookies.length; i++) {
@@ -31,4 +50,26 @@ function getCookie(name) {
     }
   }
   return '';
+}
+
+function changeLanguage(){
+  const svElements = document.querySelectorAll('.sv');
+  const enElements = document.querySelectorAll('.en');
+  if (svElements[0].style.display === 'none') {
+    for (let i = 0; i < svElements.length; i++) {
+      svElements[i].style.display = 'block';
+    }
+    for (let i = 0; i < enElements.length; i++) {
+      enElements[i].style.display = 'none';
+    }
+    document.cookie = 'language=sv; path=/; max-age=31536000';
+  } else {
+    for (let i = 0; i < svElements.length; i++) {
+      svElements[i].style.display = 'none';
+    }
+    for (let i = 0; i < enElements.length; i++) {
+      enElements[i].style.display = 'block';
+    }
+    document.cookie = 'language=en; path=/; max-age=31536000';
+  }
 }

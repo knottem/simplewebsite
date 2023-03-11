@@ -139,7 +139,6 @@ div {
   flex-direction: column;
   align-items: center;
   padding: 5px;
-  margin-bottom: 20px;
 }
 
 div p {
@@ -157,12 +156,14 @@ footer {
 }
 
 #mode-toggler {
-  padding: 10px 20px;
+  padding: 9px 16px;
+  width: 50px;
+  height: 50px;
   font-size: 18px;
   background-color: #FFFFFF;
   color: #333333;
   border: 2px solid #333333;
-  border-radius: 5px;
+  border-radius: 25%;
   cursor: pointer;
 }
 
@@ -200,7 +201,7 @@ footer {
 
 iframe {
   width: 400px;
-  height: 300px;
+  height: 400px;
   border: 0;
   align-content: center;
 }
@@ -218,7 +219,8 @@ iframe {
   display: flex;
   width: 25%;
   height: 300px;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 5%;
   line-height: 50px;
   margin: 5px;
   cursor: pointer;
@@ -252,8 +254,8 @@ iframe {
   .project:hover {
     display: flex;
     align-content: center;
-    background-color: #FFFFFF;
-    transform: scale(2);
+    background-color: #F2F2F2;
+    transform: scale(1.1);
     transform-origin: center;
     z-index: 1;
   }
@@ -271,16 +273,74 @@ video {
   height: auto;
 }
 
-@media screen and (max-width: 768px) {
+.language {
+  display: flex;
+  flex-flow: row;
+  padding: 10px 10px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  font-size: 18px;
+  background-color: #FFFFFF;
+  color: #333333;
+  border: 2px solid #333333;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.language:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.dark-mode .language {
+  background-color: #333333;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.dark-mode .language:hover {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+.sv {
+  display: block;
+}
+
+.en {
+  display: none;
+}
+
+.buttons {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-flow: row;
+}
+
+.buttons button {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1024px) {
   body {
-    max-width: 768px;
+    max-width: 1024px;
   }
 
   .portfolio {
     flex-flow: column wrap;
   }
 
+  nav {
+    padding: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100px;
+  }
+
   nav a {
+    position: relative;
+    top: 20px;
     font-size: 16px;
   }
 
@@ -301,5 +361,66 @@ video {
   iframe {
     width: 90%;
     height: 300px;
+  }
+
+  .buttons {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+
+  .portfolio {
+    flex-flow: column wrap;
+  }
+
+  nav {
+    padding: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100px;
+  }
+
+  nav a {
+    position: relative;
+    top: 20px;
+    font-size: 16px;
+  }
+
+  div p {
+    font-size: 16px;
+  }
+
+  .project {
+    width: 90%;
+    cursor: pointer;
+    height: auto;
+  }
+
+  .project:hover {
+    transform: none;
+  }
+
+  iframe {
+    width: 90%;
+    height: 300px;
+  }
+
+  .buttons {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
   }
 }

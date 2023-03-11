@@ -13,48 +13,75 @@
 <body>
 
     <nav>
-        <a href="../">Startsida</a>
+        <a href="../">Home</a>
         <a href="../portfolio/"><u>Portfolio</u></a>
-        <a href="../contact/">Kontakt</a>
-        <button id="mode-toggler">
-            <span class="icon-sun">&#9728;</span>
-            <span class="icon-moon">&#9790;</span>
-        </button>
+        <a href="../contact/" class="sv">Kontakt</a>
+        <a href="../contact/" class="en">Contact</a>
+        <div class="buttons">
+            <button class="language" onclick="changeLanguage()">
+                <span class="sv">SV</span>
+                <span class="en">EN</span>
+            </button>
+            <button id="mode-toggler">
+                <span class="icon-sun">&#9728;</span>
+                <span class="icon-moon">&#9790;</span>
+            </button>
+        </div>
     </nav>
     <header>
         <h1>Portfolio</h1>
-        <p>Klicka på valfri ruta för att komma till github-sidan för det</p>
+        <p class="sv">Klicka på valfri ruta för att komma till github-sidan för det</p>
+        <p class="en">Click on any box to go to the github page for it</p>
     </header>
 
     <div class="portfolio">
         <div class="project" onclick="window.open('https://github.com/knottem/simplewebsite', '_blank');">
-            <h2>Denna Hemsida</h2>
+            <h2 class="sv">Denna Hemsida</h2>
+            <h2 class="en">This Website</h2>
             <img src="../images/mywebsite.png" alt="Bild på denna hemsida">
-            <p>source code till denna hemsida</p>
+            <p class="sv">source code till denna hemsida</p>
+            <p class="en">source code to this website</p>
         </div>
         <div class="project" onclick="window.open('https://github.com/knottem/adventofcode', '_blank');">
             <h2>Advent of Code</h2>
             <img src="../images/adventofcode.png" alt="Bild på advent of code readme">
-            <p>Mina lösningar till några problem från advent of code 2015 och framåt, skrivna i kotlin och java</p>
+            <p class="sv">Mina lösningar till några problem från advent of code 2015 och framåt, skrivna i kotlin och
+                java</p>
+            <p class="en">My solutions to some problems from advent of code 2015 and onwards, written in kotlin and java
+            </p>
         </div>
         <div class="project" onclick="window.open('https://github.com/knottem/my2dgame', '_blank');">
-            <h2>Mitt 2D spel I java</h2>
+            <h2 class="sv">Mitt 2D spel i java</h2>
+            <h2 class="en">My 2D game in java</h2>
             <video autoplay loop muted>
                 <source src="../images/2dgame.mp4" type="video/mp4">
             </video>
-            <p>Ett simpelt 2d zelda liknande spel som jag skrev av att föja ryusnow's tutorial på youtube, utvecklade
+            <p class="sv">Ett simpelt 2d zelda liknande spel som jag skrev av att föja ryusnow's tutorial på youtube,
+                utvecklade
                 det ännu mer genom att lägga till ui t.ex.</p>
+            <p class="en">A simple 2d zelda like game that I wrote by following ryusnow's tutorial on youtube, developed
+                it
+                even more by adding ui etc.</p>
         </div>
         <div class="project" onclick="window.open('https://github.com/knottem/website', '_blank');">
-            <h2>Enkel login hemsida</h2>
+            <h2 class="sv">Enkel login hemsida</h2>
+            <h2 class="en">Simple login website</h2>
             <img src="../images/simplewebsite.png" alt="bild på login">
-            <p>En hemsida som man kan logga in på och hämta data från en databas, webservern är byggt i java med hjälp av springboot.</p>
+            <p class="sv">En hemsida som man kan logga in på och hämta data från en databas, webservern är byggt i java
+                med hjälp av springboot.</p>
+            <p class="en">A website where you can log in and fetch data from a database, the webserver is built in java
+                with the help of springboot.</p>
         </div>
         <div class="project" onclick="window.open('https://github.com/knottem/shoeDatabase', '_blank')">
-            <h2>Sko databas</h2>
+            <h2 class="sv">Sko databas</h2>
+            <h2 class="en">Shoe database</h2>
             <img src="../images/shoedatabase.png" alt="bild på databasen">
-            <p>Ett simpelt konsol program där man kan beställa skor från en "webbutik" och se sin varukorg osv, har även
+            <p class="sv">Ett simpelt konsol program där man kan beställa skor från en "webbutik" och se sin varukorg
+                osv, har även
                 ett admin login där man kan se rapporter om vilken ort som köpt flest skor osv</p>
+            <p class="en">A simple console program where you can order shoes from a "webshop" and see your shopping cart
+                etc, also
+                has an admin login where you can see reports about which city has bought the most shoes etc</p>
         </div>
     </div>
     <hr>

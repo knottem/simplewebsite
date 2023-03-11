@@ -12,19 +12,26 @@
 
 <body>
     <nav>
-        <a href="./"><u>Startsida</u></a>
+        <a href="./"><u>Home</u></a>
         <a href="portfolio/">Portfolio</a>
-        <a href="contact/">Kontakt</a>
-        <button id="mode-toggler">
-            <span class="icon-sun">&#9728;</span>
-            <span class="icon-moon">&#9790;</span>
-        </button>
+        <a href="contact/" class="sv">Kontakt</a>
+        <a href="contact/" class="en">Contact</a>
+        <div class="buttons">
+            <button class="language" onclick="changeLanguage()">
+                <span class="sv">SV</span>
+                <span class="en">EN</span>
+            </button>
+            <button id="mode-toggler">
+                <span class="icon-sun">&#9728;</span>
+                <span class="icon-moon">&#9790;</span>
+            </button>
+        </div>
     </nav>
     <header>
         <img src="images/erikwallenius.jpg" alt="Bild på mig">
         <h1>Erik Wallenius</h1>
     </header>
-    <div>
+    <div class="sv">
         <p>En föredetta brevbärare som nu har valt att byta yrke och bli webbutvecklare. Går just nu på Nackademin,
             läser JAVA22 och just nu front-end.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus voluptatibus tenetur voluptatum sed
@@ -65,6 +72,10 @@
             voluptate ullam qui eaque maxime error! Laborum numquam accusantium hic libero magnam dignissimos
             perferendis tempore adipisci. Distinctio suscipit cupiditate expedita dicta! Quae ipsam quaerat dolor
             aliquam, ullam omnis perspiciatis reiciendis?</p>
+    </div>
+    <div class="en">
+        <p>A former mailman that has decided to change path in life and decided to become a developer, studies at
+            Nackademin and learning front-end at the moment</p>
     </div>
     <hr>
     <footer>
