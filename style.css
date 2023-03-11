@@ -80,14 +80,17 @@ nav {
 }
 
 nav a {
+  font-size: 24px;
+}
+
+a {
   text-decoration: none;
   color: #333333;
-  font-size: 18px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 
-nav a:hover {
+a:hover {
   background-color: #F2F2F2;
 }
 
@@ -95,11 +98,11 @@ nav a:hover {
   background-color: #333333;
 }
 
-.dark-mode nav a {
+.dark-mode a {
   color: #F2F2F2;
 }
 
-.dark-mode nav a:hover {
+.dark-mode a:hover {
   background-color: #FFFFFF;
   color: #333333;
 }

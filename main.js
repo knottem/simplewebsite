@@ -1,18 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.body.classList.add('loaded');
+  document.body.classList.add('loaded');
 });
 
 const preferredMode = getCookie('preferredMode');
-if (preferredMode === 'dark') {
+const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+if (preferredMode === 'dark' || isDarkMode) {
   document.body.classList.add('dark-mode');
-} else if (preferredMode === 'light') {
-  document.body.classList.remove('dark-mode');
 } else {
-  if (document.body.classList.contains('dark-mode')) {
-    document.cookie = 'preferredMode=dark; path=/; max-age=31536000';
-  } else {
-    document.cookie = 'preferredMode=light; path=/; max-age=31536000';
-  }
+  document.body.classList.remove('dark-mode');
+  document.cookie = 'preferredMode=light; path=/; max-age=31536000';
 }
 
 const modeToggler = document.getElementById('mode-toggler');
