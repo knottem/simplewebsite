@@ -1,0 +1,304 @@
+/* 
+Testar att lägga till en loading screen ifall det tar för lång tid att ladda sidan. 
+*/
+/*
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.dark-mode loader {
+  background-color: #333333;
+}
+
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after{
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: 15px solid #dddddd;
+  border-top-color: #7449f5;
+  animation: loading 0.75 ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to{
+    transform: rotate(1turn);
+  }
+} 
+*/
+
+
+body {
+  font-family: 'Open sans', Arial, sans-serif;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  color: #333333;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  max-width: 1920px;
+  overflow-y: scroll;
+}
+
+body.loaded {
+  visibility: visible;
+}
+
+hr {
+  display: none;
+}
+
+.dark-mode {
+  color: #FFFFFF;
+  background-color: #333333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #F2F2F2;
+}
+
+.dark-mode nav {
+  background-color: #333333;
+}
+
+.dark-mode nav a {
+  color: #F2F2F2;
+}
+
+.dark-mode nav a:hover {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 40px;
+  background-color: #FFFFFF;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  width: 500px;
+  max-width: 80%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+.dark-mode header {
+  background-color: #333333;
+  color: #F2F2F2;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+div p {
+  max-width: 100%;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-left: 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+#mode-toggler {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #FFFFFF;
+  color: #333333;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#mode-toggler:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.dark-mode #mode-toggler {
+  background-color: #333333;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.dark-mode #mode-toggler:hover {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+.icon-sun {
+  display: none;
+}
+
+.icon-moon {
+  display: inline;
+}
+
+.dark-mode .icon-sun {
+  display: inline;
+}
+
+.dark-mode .icon-moon {
+  display: none;
+}
+
+iframe {
+  width: 400px;
+  height: 300px;
+  border: 0;
+  align-content: center;
+}
+
+.portfolio {
+  display: flex;
+  width: 80%;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.project {
+  display: flex;
+  width: 25%;
+  height: 300px;
+  border: 1px solid black;
+  line-height: 50px;
+  margin: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+.project img {
+  max-height: 40%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.project h2 {
+  margin: 0px;
+}
+
+.project p {
+  font-size: 14px;
+  object-fit: contain;
+  margin: 0px;
+
+}
+
+@supports(transform: scale(2)) {
+
+  .project:hover {
+    display: flex;
+    align-content: center;
+    background-color: #FFFFFF;
+    transform: scale(2);
+    transform-origin: center;
+    z-index: 1;
+  }
+}
+
+.dark-mode .project {
+  background-color: #333333;
+  color: #F2F2F2;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  ;
+}
+
+video {
+  width: 50%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+
+  .portfolio {
+    flex-flow: column wrap;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  div p {
+    font-size: 16px;
+  }
+
+  .project {
+    width: 90%;
+    cursor: pointer;
+    height: auto;
+  }
+
+  .project:hover {
+    transform: none;
+  }
+
+  iframe {
+    width: 90%;
+    height: 300px;
+  }
+}
