@@ -233,6 +233,7 @@ iframe {
   width: auto;
   object-fit: contain;
   margin-bottom: 5px;
+  border: #333333 1px solid;
 }
 
 .project h2 {

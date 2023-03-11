@@ -13,9 +13,9 @@
 <body>
 
     <nav>
-        <a href="index.html">Startsida</a>
-        <a href="portfolio.html"><u>Portfolio</u></a>
-        <a href="contact.html">Kontakt</a>
+        <a href="index">Startsida</a>
+        <a href="portfolio"><u>Portfolio</u></a>
+        <a href="contact">Kontakt</a>
         <button id="mode-toggler">
             <span class="icon-sun">&#9728;</span>
             <span class="icon-moon">&#9790;</span>
@@ -27,6 +27,11 @@
     </header>
 
     <div class="portfolio">
+        <div class="project" onclick="window.open('https://github.com/knottem/simplewebsite', '_blank');">
+            <h2>Denna Hemsida</h2>
+            <img src="images/mywebsite.png" alt="Bild på denna hemsida">
+            <p>source code till denna hemsida</p>
+        </div>
         <div class="project" onclick="window.open('https://github.com/knottem/adventofcode', '_blank');">
             <h2>Advent of Code</h2>
             <img src="images/adventofcode.png" alt="Bild på advent of code readme">
@@ -51,11 +56,6 @@
             <p>Ett simpelt konsol program där man kan beställa skor från en "webbutik" och se sin varukorg osv, har även
                 ett admin login där man kan se rapporter om vilken ort som köpt flest skor osv</p>
         </div>
-        <div class="project">Project 5</div>
-        <div class="project">Project 6</div>
-        <div class="project">Project 7</div>
-        <div class="project">Project 8</div>
-        <div class="project">Project 9</div>
     </div>
     <hr>
     <footer>
