@@ -8,9 +8,9 @@ It was a fun experience learning how to make dark-mode work and save the prefere
 
 These are some of my projects
 
-- **Advent of Code:** My solutions to some problems from the Advent of Code challenge, written in Kotlin and Java.
-- **Mitt 2D spel I java:** A simple 2D game inspired by Zelda, written in Java using the RyuSnow tutorial on YouTube.
-- **Enkel login hemsida:** A basic login website that fetches data from a database, built using Java and Spring Boot.
+- **[Advent of Code:](https://https://github.com/knottem/adventofcode)** My solutions to some problems from the Advent of Code challenge, written in Kotlin and Java.
+- **[Mitt 2D spel I java:](https://github.com/knottem/my2dgame)** A simple 2D game inspired by Zelda, written in Java using the RyuSnow tutorial on YouTube.
+- **[Enkel login hemsida:](https://github.com/knottem/website)** A basic login website that fetches data from a database, built using Java and Spring Boot.
 
 ## Mobile Compatibility
 
