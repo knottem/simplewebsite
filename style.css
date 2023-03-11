@@ -80,7 +80,7 @@ nav {
 }
 
 nav a {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 a {
@@ -345,7 +345,6 @@ video {
   nav a {
     position: relative;
     top: 20px;
-    font-size: 16px;
   }
 
   div p {
@@ -395,7 +394,6 @@ video {
   nav a {
     position: relative;
     top: 20px;
-    font-size: 16px;
   }
 
   div p {
