@@ -133,6 +133,10 @@ header img:hover {
   color: #F2F2F2;
 }
 
+.textcenter{
+  text-align: center;
+}
+
 h1 {
   font-size: 48px;
   margin-bottom: 20px;
