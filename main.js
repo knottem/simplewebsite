@@ -3,12 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const preferredMode = getCookie('preferredMode');
-const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-if (preferredMode === 'dark' || isDarkMode) {
+if (preferredMode === 'dark') {
   document.body.classList.add('dark-mode');
+} else if (!preferredMode) {
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+    document.cookie = 'preferredMode=dark; path=/; max-age=31536000';
+  } else {
+    document.body.classList.remove('dark-mode');
+    document.cookie = 'preferredMode=light; path=/; max-age=31536000';
+  }
 } else {
   document.body.classList.remove('dark-mode');
-  document.cookie = 'preferredMode=light; path=/; max-age=31536000';
 }
 
 const modeToggler = document.getElementById('mode-toggler');
