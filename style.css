@@ -242,6 +242,7 @@ iframe {
 
 .project img {
   max-height: 40%;
+  max-width: 100%;
   object-fit: contain;
   border: 2px solid black; /* add border around image */
 }
