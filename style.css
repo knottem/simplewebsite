@@ -221,16 +221,20 @@ iframe {
   align-content: center;
   justify-content: center;
   margin: 0 auto;
+  list-style: none;
+  padding: 0;
 }
 
 .project {
   display: flex;
+  flex-direction: column;
   width: 25%;
   height: 300px;
   border: 2px solid black;
   border-radius: 5%;
   line-height: 50px;
   margin: 5px;
+  align-items: center;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
@@ -238,12 +242,13 @@ iframe {
 
 .project img {
   max-height: 40%;
-  max-width: 100%;
-  height: auto;
-  width: auto;
   object-fit: contain;
-  margin-bottom: 5px;
-  border: #333333 1px solid;
+  border: 2px solid black; /* add border around image */
+}
+
+.project video {
+  width: 100%;
+  max-height: 40%;
 }
 
 .project h2 {
@@ -253,32 +258,23 @@ iframe {
 .project p {
   font-size: 14px;
   object-fit: contain;
-  margin: 0px;
-
+  margin: 1px;
+  line-height: 1.2;
 }
 
-@supports(transform: scale(2)) {
-
-  .project:hover {
-    display: flex;
-    align-content: center;
-    background-color: #F2F2F2;
-    transform: scale(1.1);
-    transform-origin: center;
-    z-index: 1;
-  }
+.project:hover {
+  display: flex;
+  align-content: center;
+  background-color: #F2F2F2;
+  transform: scale(1.1);
+  transform-origin: center;
+  z-index: 1;
 }
 
 .dark-mode .project {
   background-color: #333333;
   color: #F2F2F2;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  ;
-}
-
-video {
-  width: 50%;
-  height: auto;
 }
 
 .language {
