@@ -3,19 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kontakt</title>
+    <title>Contakt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <script src="../main.js" defer></script>
+    <script src="removeHtmlExtension.js"></script>
 </head>
 
 <body>
     <nav>
-        <a href="/">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html" class="sv"><u>Kontakt</u></a>
-        <a href="contact.html" class="en"><u>Contact</u></a>
+        <a href="startsida" onclick="removeHtmlExtension()">Home</a>
+        <a href="portfolio" onclick="removeHtmlExtension()">Portfolio</a>
+        <a href="contact" class="sv" onclick="removeHtmlExtension()"><u>Kontakt</u></a>
+        <a href="contact" class="en" onclick="removeHtmlExtension()"><u>Contact</u></a>
         <div class="buttons">
             <button class="language" onclick="changeLanguage()">
                 <span class="sv">SV</span>
