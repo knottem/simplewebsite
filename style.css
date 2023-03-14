@@ -260,7 +260,6 @@ iframe {
 
 .project p {
   font-size: 14px;
-  object-fit: contain;
   margin: 1px;
   line-height: 1.2;
 }
@@ -330,9 +329,9 @@ iframe {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
   body {
-    max-width: 1024px;
+    max-width: 1180px;
   }
 
   header{
@@ -358,6 +357,7 @@ iframe {
     width: 90%;
     cursor: pointer;
     height: auto;
+    padding-bottom: 15px;
   }
   .project p {
     font-size: 20px;
