@@ -218,7 +218,7 @@ iframe {
 
 .portfolio {
   display: flex;
-  width: 80%;
+  width: 75%;
   flex-flow: row wrap;
   align-content: center;
   justify-content: center;
@@ -230,7 +230,7 @@ iframe {
 .project {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 350px;
   height: 300px;
   border: 2px solid black;
   border-radius: 5%;
@@ -340,6 +340,7 @@ iframe {
 
   .portfolio {
     flex-flow: column wrap;
+    width: 90%;
   }
 
   nav {
