@@ -374,6 +374,10 @@ iframe {
     height: 300px;
   }
 
+  .pmobil{
+    font-size: 16px;
+  }
+
   .buttons {
     position: absolute;
     right: 0;
