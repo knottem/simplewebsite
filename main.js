@@ -1,5 +1,44 @@
+"use strict";
+import { projects } from "./projects.js";
+
 document.addEventListener('DOMContentLoaded', function() {
   document.body.classList.add('loaded');
+  if(document.getElementById('projects')){
+    projects.forEach(renderProjects);
+  }
+  
+});
+
+
+function renderProjects(element) {
+  const project = document.createElement('li');
+  project.classList.add('project');
+  project.onclick = () => window.open(element.link, '_blank');
+  let projecthtml = `
+            <h2 class="sv">${element.titleSv}</h2>
+            <h2 class="en">${element.titleEn}</h2>`;
+  if (element.video) {
+      projecthtml += `
+          <video autoplay loop muted>
+              <source src="${element.video}" type="video/mp4"> 
+          </video>`; 
+
+  } else {
+      projecthtml += `<img src="${element.image}" alt="${element.alt}">`;
+  }
+  projecthtml += `<p class="sv">${element.descriptionSv}</p>
+                  <p class="en">${element.descriptionEn}</p>`;
+
+  project.innerHTML = projecthtml;
+  
+  document.getElementById('projects').appendChild(project);
+}
+
+
+const btnLang = document.getElementById('btnLang');
+
+btnLang.addEventListener('click', () => {
+  changeLanguage();
 });
 
 const preferredMode = getCookie('preferredMode');

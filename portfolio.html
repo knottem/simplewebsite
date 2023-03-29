@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <script src="main.js" type="module" defer></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <a href="contact" class="sv">Kontakt</a>
         <a href="contact" class="en">Contact</a>
         <div class="buttons">
-            <button class="language" onclick="changeLanguage()">
+            <button class="language" id="btnLang">
                 <span class="sv">SV</span>
                 <span class="en">EN</span>
             </button>
@@ -36,63 +36,7 @@
         <p class="en">Link to my github page: <a href="https://github.com/knottem" target="_blank">Github</a></p>
     </header>
 
-    <ul class="portfolio">
-        <li class="project" onclick="window.open('https://github.com/knottem/Node-Api-Server', '_blank');">
-            <h2 class="sv">Node Api Server</h2>
-            <h2 class="en">Node Api Server</h2>
-            <img src="images/api.png" alt="Bild på vad min api skriver ut">
-            <p class="sv">En server api som jag gjorde till ett projekt, då fakestoreapi låg nere, den är hostad på min hemmaserver genom freebsd jail</p>
-            <p class="en">Just a project api server I made, when the real fakestoreapi was down, that's hosted on my homeserver thru a freebsd jail</p>
-        </li>
-        <li class="project" onclick="window.open('https://github.com/knottem/simplewebsite', '_blank');">
-            <h2 class="sv">Denna Hemsida</h2>
-            <h2 class="en">This Website</h2>
-            <img src="images/mywebsite.png" alt="Bild på denna hemsida">
-            <p class="sv">source code till denna hemsida</p>
-            <p class="en">source code to this website</p>
-        </li>
-        <li class="project" onclick="window.open('https://github.com/knottem/shoeDatabase', '_blank')">
-            <h2 class="sv">Sko databas</h2>
-            <h2 class="en">Shoe database</h2>
-            <img src="images/shoedatabase.png" alt="bild på databasen">
-            <p class="sv">Ett simpelt konsol program där man kan beställa skor från en "webbutik" och se sin varukorg
-                osv, har även
-                ett admin login där man kan se rapporter om vilken ort som köpt flest skor osv</p>
-            <p class="en">A simple console program where you can order shoes from a "webshop" and see your shopping cart
-                etc, also
-                has an admin login where you can see reports about which city has bought the most shoes etc</p>
-        </li>
-        <li class="project" onclick="window.open('https://github.com/knottem/adventofcode', '_blank');">
-            <h2>Advent of Code</h2>
-            <img src="images/adventofcode.png" alt="Bild på advent of code readme">
-            <p class="sv">Mina lösningar till några problem från advent of code 2015 och framåt, skrivna i kotlin och
-                java</p>
-            <p class="en">My solutions to some problems from advent of code 2015 and onwards, written in kotlin and java
-            </p>
-        </li>
-        <li class="project" onclick="window.open('https://github.com/knottem/my2dgame', '_blank');">
-            <h2 class="sv">Mitt 2D spel i java</h2>
-            <h2 class="en">My 2D game in java</h2>
-            <video autoplay loop muted>
-                <source src="images/2dgame.mp4" type="video/mp4">
-            </video>
-            <p class="sv">Ett simpelt 2d zelda liknande spel som jag skrev av att föja ryisnow's tutorial på youtube,
-                utvecklade
-                det ännu mer genom att lägga till test-ui, diagonal rörelse t.ex.</p>
-            <p class="en">A simple 2d zelda like game that I wrote by following ryisnow's tutorial on youtube, developed
-                it
-                even more by adding test-ui, diagonal movement etc</p>
-        </li>
-        <li class="project" onclick="window.open('https://github.com/knottem/website', '_blank');">
-            <h2 class="sv">Enkel login hemsida</h2>
-            <h2 class="en">Simple login website</h2>
-            <img src="images/simplewebsite.png" alt="bild på login">
-            <p class="sv">En hemsida som man kan logga in på och hämta data från en databas, webservern är byggt i java
-                med hjälp av springboot.</p>
-            <p class="en">A website where you can log in and fetch data from a database, the webserver is built in java
-                with the help of springboot.</p>
-        </li>
-    </ul>
+    <ul class="portfolio" id="projects"></ul>
     
     <hr>
     <footer>
