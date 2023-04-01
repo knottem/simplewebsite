@@ -1,4 +1,14 @@
 export const projects = [
+    {
+        titleSv: 'Fakestore hemsida',
+        titleEn: 'Fakestore website',
+        descriptionSv: "En hemsida som använder sig av faketoreapi och min egen api server, gjorde en egen varukorg som sparar i localstorage",
+        descriptionEn: "A website that uses fakestoreapi and my own api server, made my own cart that saves in localstorage",
+        link: 'https://github.com/knottem/fakestore-cart',
+        image: 'images/fakestore.png',
+        alt: 'fakestore',
+        video: false
+    },
    {
         titleSv: 'Node Api Server',
         titleEn: 'Node Api Server',
