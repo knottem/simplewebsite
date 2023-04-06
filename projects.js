@@ -1,5 +1,15 @@
 export const projects = [
     {
+        titleSv: 'Min deploy api för att kunna deploya mina projekt till min server',
+        titleEn: 'My deploy api to deploy my projects to my server',
+        descriptionSv: 'En api som jag skrev i nodejs som jag använder för att kunna deploya mina projekt till min server, den är hostad på min hemmaserver genom freebsd jail',
+        descriptionEn: 'An api that I wrote in nodejs that I use to deploy my projects to my server, it is hosted on my homeserver through a freebsd jail',
+        link: 'https://github.com/knottem/Deploy',
+        image: 'images/deploy.png',
+        alt: 'deploy',
+        video: false
+    },
+    {
         titleSv: 'Fakestore hemsida',
         titleEn: 'Fakestore website',
         descriptionSv: "En hemsida som använder sig av faketoreapi och min egen api server, gjorde en egen varukorg som sparar i localstorage",
